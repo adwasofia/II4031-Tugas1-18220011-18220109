@@ -9,7 +9,7 @@ class ClassVigenereCipher():
         screenVigenereCipher.title("<Title Vigenere Cipher>")
         screenVigenereCipher.geometry("1270x690")
         screenVigenereCipher.configure(bg="#FFFFFF")
-
+    
         # Entry box Pesan Teks yang akan Dienkripsi
         global inputPesanTeks
         global pesanTeks
@@ -36,7 +36,7 @@ class ClassVigenereCipher():
     def lakukanEnkripsi (self):
         global encryptedLetter
         global encryptedPesan
-        pesan = pesanTeks.get()
+        pesan = pesanTeks.get().replace(" ", "")
         kunci = key.get()
         while (len(kunci) < len(pesan)):
             kunci += kunci
